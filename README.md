@@ -17,7 +17,7 @@ import RunWeb from '@uiw/react-run-web';
 <RunWeb
   css="div {color:red;}"
   js="console.log('hello world!')"
-  html="<div>ttt</div>"
+  html="<div>hello world!</div>"
 />
 ```
 
