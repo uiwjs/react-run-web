@@ -1,13 +1,13 @@
 import React from 'react';
 import { Switch, Route, HashRouter } from 'react-router-dom';
-import styles from './App.module.less';
 import Home from './pages/run';
 import Docs from './pages/docs';
+import './App.less';
 
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className={styles.warpper}>
+      <div>
         <Switch>
           <Route exact path="/">
             <Home />
