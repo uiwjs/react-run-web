@@ -1,0 +1,23 @@
+.header {
+  height: 38px;
+  border-bottom: 1px solid #d5d5d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: bold;
+}
+
+.menu {
+  font-weight: 200;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  > a + a {
+    margin-left: 10px;
+  }
+}
