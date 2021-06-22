@@ -8,7 +8,7 @@ export interface RunWebProps extends React.IframeHTMLAttributes<HTMLIFrameElemen
 }
 
 export default React.forwardRef<HTMLIFrameElement, RunWebProps>((props, ref) => {
-  const { html, css, js, title = 'Demo Title', ...other } = props;
+  const { html = '', css, js, title = 'Demo Title', ...other } = props;
 
   const srcDoc = useMemo(() => {
     const jsString = js ? `<script type="text/javascript">${js}</script>` : '';
