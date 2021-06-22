@@ -21,6 +21,17 @@ import RunWeb from '@uiw/react-run-web';
 />
 ```
 
+## Props
+
+```ts
+interface RunWebProps extends React.IframeHTMLAttributes<HTMLIFrameElement> {
+  css?: string;
+  js?: string;
+  html?: string;
+  title?: string;
+}
+```
+
 ## Online Code Preview
 
 [Preview Demo Example](https://uiwjs.github.io/react-run-web#/?html=<div>Hello%20World</div>&js=console.log('hello%20world')&css=div%20{%20color:%20red;}).
