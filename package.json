@@ -28,6 +28,10 @@
   },
   "author": "Kenny Wong <wowohoo@qq.com>",
   "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
   "keywords": [
     "react",
     "run-web",
