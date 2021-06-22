@@ -41,7 +41,7 @@ npm run watch
 npm run start
 ```
 
-**production**
+**`production`**
 
 Builds the app for production to the build folder.
 
