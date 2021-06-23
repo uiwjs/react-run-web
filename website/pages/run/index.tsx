@@ -1,21 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Split from '@uiw/react-split';
-import RunWeb from '../../../';
-import styles from './index.module.less';
 import Tag from './Tag';
+import RunWeb from '../../../';
+import TextareaEditor from './Textarea';
+import styles from './index.module.less';
+import './language.less';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
-
-const Textarea = (props: React.TextareaHTMLAttributes<HTMLTextAreaElement>) => (
-  <textarea
-    draggable
-    style={{ width: '100%', resize: 'none', position: 'relative', border: 0, padding: 5 }}
-    {...props}
-  />
-);
 
 export default function Run() {
   const [htmlStr, setHtmlStr] = useState('');
@@ -52,52 +46,56 @@ export default function Run() {
       </div>
       <Split style={{ width: '100%', height: 'calc(100vh - 39px)' }}>
         <Split lineBar mode="vertical" style={{ minWidth: 120, width: '43%' }}>
-          <div style={{ height: '40%', display: 'flex', padding: 1, position: 'relative', backgroundColor: '#fff' }}>
-            <Tag color="#e94d27">HTML</Tag>
-            <Textarea
+          <div style={{ height: '40%' }} className={styles.editor}>
+            <Tag color="#f44336">HTML</Tag>
+            <TextareaEditor
               value={htmlStr}
-              placeholder="Please enter HTML code."
-              onChange={(evn) => {
-                setHtmlStr(evn.target.value);
+              language="html"
+              onPaste={(event) => {
+                let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
+                setHtmlStr(paste.replace(/^\n+/g, '').replace(/\n+$/g, ''));
+                event.preventDefault();
               }}
+              onChange={(evn) => setHtmlStr(evn.target.value)}
             />
           </div>
           <div
             style={{
               height: '30%',
-              display: 'flex',
-              padding: 1,
-              position: 'relative',
-              backgroundColor: '#fff',
               zIndex: 2,
             }}
+            className={styles.editor}
           >
-            <Tag color="#dfa424">JS</Tag>
-            <Textarea
+            <Tag color="#f7ac09">JS</Tag>
+            <TextareaEditor
               value={jsStr}
-              placeholder="Please enter JavaScript code."
-              onChange={(evn) => {
-                setJsStr(evn.target.value);
+              language="js"
+              onPaste={(event) => {
+                let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
+                setJsStr(paste.replace(/^\n+/g, '').replace(/\n+$/g, ''));
+                event.preventDefault();
               }}
+              onChange={(evn) => setJsStr(evn.target.value)}
             />
           </div>
           <div
             style={{
               height: '30%',
-              display: 'flex',
-              padding: 1,
-              position: 'relative',
-              backgroundColor: '#fff',
               zIndex: 3,
             }}
+            className={styles.editor}
           >
-            <Tag color="#0874b7">CSS</Tag>
-            <Textarea
+            <Tag color="#004fd4">CSS</Tag>
+            <TextareaEditor
               value={cssStr}
-              placeholder="Please enter CSS code."
-              onChange={(evn) => {
-                setCssStr(evn.target.value);
+              language="css"
+              onPasteCapture={(event) => {
+                let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
+                paste = paste.replace(/^\n+/g, '').replace(/\n+$/g, '');
+                setCssStr(paste);
+                event.preventDefault();
               }}
+              onChange={(evn) => setCssStr(evn.target.value)}
             />
           </div>
         </Split>
