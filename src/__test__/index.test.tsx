@@ -25,7 +25,7 @@ it('RunWeb Props js="..."', async () => {
     expect(tree.props.height).toEqual('100%');
     expect(tree.props.style).toEqual({ border: 0 });
     expect(tree.props.srcDoc).toEqual(
-      `<!DOCTYPE html><html><head></head><body><script type="text/javascript">console.log('hello world!')</script></body></html>`,
+      `<!DOCTYPE html><html><head></head><body></body><script type="text/javascript">console.log('hello world!')</script></html>`,
     );
   }
 });
