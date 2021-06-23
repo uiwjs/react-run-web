@@ -51,6 +51,8 @@ export default function Run() {
             <TextareaEditor
               value={htmlStr}
               language="html"
+              className={htmlStr ? '' : 'empty'}
+              placeholder="Please enter HTML code."
               onPaste={(event) => {
                 let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
                 setHtmlStr(paste.replace(/^\n+/g, '').replace(/\n+$/g, ''));
@@ -70,6 +72,8 @@ export default function Run() {
             <TextareaEditor
               value={jsStr}
               language="js"
+              className={jsStr ? '' : 'empty'}
+              placeholder="Please enter JavaScript code."
               onPaste={(event) => {
                 let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
                 setJsStr(paste.replace(/^\n+/g, '').replace(/\n+$/g, ''));
@@ -89,6 +93,8 @@ export default function Run() {
             <TextareaEditor
               value={cssStr}
               language="css"
+              className={cssStr ? '' : 'empty'}
+              placeholder="Please enter CSS code."
               onPasteCapture={(event) => {
                 let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
                 paste = paste.replace(/^\n+/g, '').replace(/\n+$/g, '');

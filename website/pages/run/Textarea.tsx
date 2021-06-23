@@ -35,7 +35,7 @@ interface TextareaProps extends React.TextareaHTMLAttributes<HTMLTextAreaElement
 }
 
 const Textarea = (props: TextareaProps) => {
-  const { language, value = '' } = props;
+  const { className, language, value = '', ...other } = props;
   const textRef = useRef<HTMLTextAreaElement>(null);
   const viewRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -52,9 +52,9 @@ const Textarea = (props: TextareaProps) => {
         autoCorrect="off"
         spellCheck="false"
         autoCapitalize="off"
-        className={styles.textarea}
+        {...other}
         ref={textRef}
-        {...props}
+        className={`${className || ''} ${styles.textarea}`}
         value={value}
       />
       <div
