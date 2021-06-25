@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import Split from '@uiw/react-split';
+import CodeEditor from '@uiw/react-textarea-code-editor';
 import Tag from './Tag';
 import RunWeb from '../../../';
-import TextareaEditor from './Textarea';
 import styles from './index.module.less';
-import './language.less';
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -48,18 +47,15 @@ export default function Run() {
         <Split lineBar mode="vertical" style={{ minWidth: 120, width: '43%' }}>
           <div style={{ height: '40%' }} className={styles.editor}>
             <Tag color="#f44336">HTML</Tag>
-            <TextareaEditor
-              value={htmlStr}
-              language="html"
-              className={htmlStr ? '' : 'empty'}
-              placeholder="Please enter HTML code."
-              onPaste={(event) => {
-                let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
-                setHtmlStr(paste.replace(/^\n+/g, '').replace(/\n+$/g, ''));
-                event.preventDefault();
-              }}
-              onChange={(evn) => setHtmlStr(evn.target.value)}
-            />
+            <div className={styles.editorCode}>
+              <CodeEditor
+                value={htmlStr}
+                style={{ minHeight: '100%' }}
+                placeholder="Please enter HTML code."
+                onChange={(evn) => setHtmlStr(evn.target.value)}
+                language="html"
+              />
+            </div>
           </div>
           <div
             style={{
@@ -69,18 +65,15 @@ export default function Run() {
             className={styles.editor}
           >
             <Tag color="#f7ac09">JS</Tag>
-            <TextareaEditor
-              value={jsStr}
-              language="js"
-              className={jsStr ? '' : 'empty'}
-              placeholder="Please enter JavaScript code."
-              onPaste={(event) => {
-                let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
-                setJsStr(paste.replace(/^\n+/g, '').replace(/\n+$/g, ''));
-                event.preventDefault();
-              }}
-              onChange={(evn) => setJsStr(evn.target.value)}
-            />
+            <div className={styles.editorCode}>
+              <CodeEditor
+                value={jsStr}
+                style={{ minHeight: '100%' }}
+                placeholder="Please enter JavaScript code."
+                onChange={(evn) => setJsStr(evn.target.value)}
+                language="js"
+              />
+            </div>
           </div>
           <div
             style={{
@@ -90,19 +83,15 @@ export default function Run() {
             className={styles.editor}
           >
             <Tag color="#004fd4">CSS</Tag>
-            <TextareaEditor
-              value={cssStr}
-              language="css"
-              className={cssStr ? '' : 'empty'}
-              placeholder="Please enter CSS code."
-              onPasteCapture={(event) => {
-                let paste = (event.clipboardData || (window as any).clipboardData).getData('text');
-                paste = paste.replace(/^\n+/g, '').replace(/\n+$/g, '');
-                setCssStr(paste);
-                event.preventDefault();
-              }}
-              onChange={(evn) => setCssStr(evn.target.value)}
-            />
+            <div className={styles.editorCode}>
+              <CodeEditor
+                value={cssStr}
+                style={{ minHeight: '100%' }}
+                placeholder="Please enter CSS code."
+                onChange={(evn) => setCssStr(evn.target.value)}
+                language="css"
+              />
+            </div>
           </div>
         </Split>
         <div style={{ minWidth: 120, flex: 1 }}>
