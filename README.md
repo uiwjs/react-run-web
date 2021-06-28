@@ -31,6 +31,7 @@ interface RunWebProps extends React.IframeHTMLAttributes<HTMLIFrameElement> {
   js?: string;
   html?: string;
   title?: string;
+  head?: React.ReactNode;
 }
 ```
 
