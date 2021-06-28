@@ -95,7 +95,7 @@ export default function Run() {
           </div>
         </Split>
         <div style={{ minWidth: 120, flex: 1 }}>
-          <RunWeb css={cssStr} js={jsStr} html={htmlStr} />
+          <RunWeb css={cssStr} js={jsStr} html={htmlStr} head={<meta charSet="utf-8" />} />
         </div>
       </Split>
     </div>
