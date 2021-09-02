@@ -1,6 +1,6 @@
 {
   "name": "@uiw/react-run-web",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Online Code Editor for Rapid Web Development.",
   "homepage": "https://uiwjs.github.io/react-run-web/",
   "main": "cjs/index.js",
