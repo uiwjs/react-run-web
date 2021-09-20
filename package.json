@@ -37,6 +37,12 @@
       "prettier --write"
     ]
   },
+  "jest": {
+    "coverageReporters": [
+      "lcov",
+      "json-summary"
+    ]
+  },
   "peerDependencies": {
     "@babel/runtime": ">=7.10.0",
     "react": ">=16.9.0",

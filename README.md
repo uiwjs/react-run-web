@@ -1,7 +1,7 @@
 Run Web
 ===
 
-[![Build & Deploy](https://github.com/uiwjs/react-run-web/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/react-run-web/actions/workflows/ci.yml) [![Coverage Status](https://coveralls.io/repos/github/uiwjs/react-run-web/badge.svg?branch=main)](https://coveralls.io/github/uiwjs/react-run-web?branch=main) [![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-run-web/file/README.md) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@uiw/react-run-web)](https://www.npmjs.com/package/@uiw/react-run-web) [![npm version](https://img.shields.io/npm/v/@uiw/react-run-web.svg)](https://www.npmjs.com/package/@uiw/react-run-web)
+[![Build & Deploy](https://github.com/uiwjs/react-run-web/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/react-run-web/actions/workflows/ci.yml) [![Coverage Status](https://uiwjs.github.io/react-run-web/coverage/badges.svg)](https://uiwjs.github.io/react-run-web/coverage/lcov-report) [![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-run-web/file/README.md) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@uiw/react-run-web)](https://www.npmjs.com/package/@uiw/react-run-web) [![npm version](https://img.shields.io/npm/v/@uiw/react-run-web.svg)](https://www.npmjs.com/package/@uiw/react-run-web)
 
 Online Code Editor for Rapid Web Development, [Preview Demo](https://uiwjs.github.io/react-run-web#/?html=<div>Hello%20World</div>&js=console.log('hello%20world')&css=div%20{%20color:%20red;}).
 
