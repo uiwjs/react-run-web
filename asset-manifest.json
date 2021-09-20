@@ -6,17 +6,17 @@
     "runtime-main.js": "/react-run-web/static/js/runtime-main.5e0f07d9.js",
     "runtime-main.js.map": "/react-run-web/static/js/runtime-main.5e0f07d9.js.map",
     "static/css/2.386260d4.chunk.css": "/react-run-web/static/css/2.386260d4.chunk.css",
-    "static/js/2.e3c372bb.chunk.js": "/react-run-web/static/js/2.e3c372bb.chunk.js",
-    "static/js/2.e3c372bb.chunk.js.map": "/react-run-web/static/js/2.e3c372bb.chunk.js.map",
+    "static/js/2.cebb9e31.chunk.js": "/react-run-web/static/js/2.cebb9e31.chunk.js",
+    "static/js/2.cebb9e31.chunk.js.map": "/react-run-web/static/js/2.cebb9e31.chunk.js.map",
     "index.html": "/react-run-web/index.html",
     "static/css/2.386260d4.chunk.css.map": "/react-run-web/static/css/2.386260d4.chunk.css.map",
     "static/css/main.5ddb186c.chunk.css.map": "/react-run-web/static/css/main.5ddb186c.chunk.css.map",
-    "static/js/2.e3c372bb.chunk.js.LICENSE.txt": "/react-run-web/static/js/2.e3c372bb.chunk.js.LICENSE.txt"
+    "static/js/2.cebb9e31.chunk.js.LICENSE.txt": "/react-run-web/static/js/2.cebb9e31.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5e0f07d9.js",
     "static/css/2.386260d4.chunk.css",
-    "static/js/2.e3c372bb.chunk.js",
+    "static/js/2.cebb9e31.chunk.js",
     "static/css/main.5ddb186c.chunk.css",
     "static/js/main.6477c3c1.chunk.js"
   ]
