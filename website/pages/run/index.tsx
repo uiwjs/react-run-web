@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, useHistory, Link } from 'react-router-dom';
 import Split from '@uiw/react-split';
 import CodeEditor from '@uiw/react-textarea-code-editor';
 import Tag from './Tag';
@@ -14,7 +14,8 @@ export default function Run() {
   const [htmlStr, setHtmlStr] = useState('');
   const [cssStr, setCssStr] = useState('');
   const [jsStr, setJsStr] = useState('');
-  let query = useQuery();
+  const query = useQuery();
+  const history = useHistory();
 
   useEffect(() => {
     const html = query.get('html');
@@ -31,6 +32,26 @@ export default function Run() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const handleChange = (value: string, type: 'html' | 'css' | 'js') => {
+    switch (type) {
+      case 'html':
+        setHtmlStr(value);
+        query.set('html', value);
+        break;
+      case 'css':
+        setCssStr(value);
+        query.set('css', value);
+        break;
+      case 'js':
+        setJsStr(value);
+        query.set('js', value);
+        break;
+      default:
+        break;
+    }
+    history.push(`?${query.toString()}`);
+  };
 
   return (
     <div style={{ minHeight: '100vh' }}>
@@ -52,7 +73,7 @@ export default function Run() {
                 value={htmlStr}
                 style={{ minHeight: '100%' }}
                 placeholder="Please enter HTML code."
-                onChange={(evn) => setHtmlStr(evn.target.value)}
+                onChange={(evn) => handleChange(evn.target.value, 'html')}
                 language="html"
               />
             </div>
@@ -70,7 +91,7 @@ export default function Run() {
                 value={jsStr}
                 style={{ minHeight: '100%' }}
                 placeholder="Please enter JavaScript code."
-                onChange={(evn) => setJsStr(evn.target.value)}
+                onChange={(evn) => handleChange(evn.target.value, 'js')}
                 language="js"
               />
             </div>
@@ -88,7 +109,7 @@ export default function Run() {
                 value={cssStr}
                 style={{ minHeight: '100%' }}
                 placeholder="Please enter CSS code."
-                onChange={(evn) => setCssStr(evn.target.value)}
+                onChange={(evn) => handleChange(evn.target.value, 'css')}
                 language="css"
               />
             </div>
