@@ -1,17 +1,15 @@
+import { useLocation, Link } from 'react-router-dom';
 import MarkdownPreview from '@uiw/react-markdown-preview';
 import GitHubCorners from '@uiw/react-github-corners';
-import { Link } from 'react-router-dom';
 import MDStr from '../../../README.md';
 import styles from './index.module.less';
 
 export default function Docs() {
+  const location = useLocation();
   return (
     <div style={{ margin: '0 auto', maxWidth: 650, paddingTop: 50, paddingBottom: 60 }}>
       <GitHubCorners fixed size={52} target="__blank" href="https://github.com/uiwjs/react-run-web" />
-      <Link
-        className={styles.link}
-        to="/?html=<div>Hello%20World</div>&js=console.log('hello%20world')&css=div%20{%20color:%20red;}"
-      >
+      <Link className={styles.link} to={location.state ? `/?${location.state}` : '/'} state={location.state}>
         <svg viewBox="0 0 1087 1024" height="14" style={{ marginRight: 8 }}>
           <path
             fill="currentColor"

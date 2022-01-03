@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useHistory, Link } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 import Split from '@uiw/react-split';
 import CodeEditor from '@uiw/react-textarea-code-editor';
 import Tag from './Tag';
@@ -15,7 +15,7 @@ export default function Run() {
   const [cssStr, setCssStr] = useState('');
   const [jsStr, setJsStr] = useState('');
   const query = useQuery();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const html = query.get('html');
@@ -50,7 +50,10 @@ export default function Run() {
       default:
         break;
     }
-    history.push(`?${query.toString()}`);
+    navigate(`?${query.toString()}`, {
+      replace: true,
+      state: query.toString(),
+    });
   };
 
   return (
@@ -61,7 +64,9 @@ export default function Run() {
           <a href="https://github.com/uiwjs/react-run-web" target="__blank">
             Github
           </a>
-          <Link to="/docs">Docs</Link>
+          <Link to="/docs" state={query.toString() || ''}>
+            Docs
+          </Link>
         </div>
       </div>
       <Split style={{ width: '100%', height: 'calc(100vh - 39px)' }}>
