@@ -1,23 +1,19 @@
 {
   "files": {
-    "main.css": "/react-run-web/static/css/main.5ddb186c.chunk.css",
-    "main.js": "/react-run-web/static/js/main.f78bd6dd.chunk.js",
-    "main.js.map": "/react-run-web/static/js/main.f78bd6dd.chunk.js.map",
-    "runtime-main.js": "/react-run-web/static/js/runtime-main.29ea95d5.js",
-    "runtime-main.js.map": "/react-run-web/static/js/runtime-main.29ea95d5.js.map",
-    "static/css/2.60ad6358.chunk.css": "/react-run-web/static/css/2.60ad6358.chunk.css",
-    "static/js/2.7069d38f.chunk.js": "/react-run-web/static/js/2.7069d38f.chunk.js",
-    "static/js/2.7069d38f.chunk.js.map": "/react-run-web/static/js/2.7069d38f.chunk.js.map",
+    "main.css": "/react-run-web/static/css/main.e0299b60.css",
+    "main.js": "/react-run-web/static/js/main.f594262c.js",
+    "refractor-vendor.js": "/react-run-web/static/js/refractor-vendor.f6947578.js",
+    "react-vendor.js": "/react-run-web/static/js/react-vendor.d4761c7d.js",
     "index.html": "/react-run-web/index.html",
-    "static/css/2.60ad6358.chunk.css.map": "/react-run-web/static/css/2.60ad6358.chunk.css.map",
-    "static/css/main.5ddb186c.chunk.css.map": "/react-run-web/static/css/main.5ddb186c.chunk.css.map",
-    "static/js/2.7069d38f.chunk.js.LICENSE.txt": "/react-run-web/static/js/2.7069d38f.chunk.js.LICENSE.txt"
+    "main.e0299b60.css.map": "/react-run-web/static/css/main.e0299b60.css.map",
+    "main.f594262c.js.map": "/react-run-web/static/js/main.f594262c.js.map",
+    "refractor-vendor.f6947578.js.map": "/react-run-web/static/js/refractor-vendor.f6947578.js.map",
+    "react-vendor.d4761c7d.js.map": "/react-run-web/static/js/react-vendor.d4761c7d.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.29ea95d5.js",
-    "static/css/2.60ad6358.chunk.css",
-    "static/js/2.7069d38f.chunk.js",
-    "static/css/main.5ddb186c.chunk.css",
-    "static/js/main.f78bd6dd.chunk.js"
+    "static/js/refractor-vendor.f6947578.js",
+    "static/js/react-vendor.d4761c7d.js",
+    "static/css/main.e0299b60.css",
+    "static/js/main.f594262c.js"
   ]
 }
