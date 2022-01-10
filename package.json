@@ -57,7 +57,7 @@
     "@types/react-test-renderer": "17.0.1",
     "@uiw/react-github-corners": "1.5.3",
     "@uiw/react-markdown-preview": "3.4.6",
-    "@uiw/react-split": "5.8.4",
+    "@uiw/react-split": "5.8.5",
     "@uiw/react-textarea-code-editor": "1.4.15",
     "husky": "7.0.4",
     "kkt": "7.0.4",
