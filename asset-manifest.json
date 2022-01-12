@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/react-run-web/static/css/main.e0299b60.css",
-    "main.js": "/react-run-web/static/js/main.3079ba41.js",
+    "main.css": "/react-run-web/static/css/main.6334a8ea.css",
+    "main.js": "/react-run-web/static/js/main.37267292.js",
     "refractor-vendor.js": "/react-run-web/static/js/refractor-vendor.f6947578.js",
     "react-vendor.js": "/react-run-web/static/js/react-vendor.d4761c7d.js",
     "index.html": "/react-run-web/index.html",
-    "main.e0299b60.css.map": "/react-run-web/static/css/main.e0299b60.css.map",
-    "main.3079ba41.js.map": "/react-run-web/static/js/main.3079ba41.js.map",
+    "main.6334a8ea.css.map": "/react-run-web/static/css/main.6334a8ea.css.map",
+    "main.37267292.js.map": "/react-run-web/static/js/main.37267292.js.map",
     "refractor-vendor.f6947578.js.map": "/react-run-web/static/js/refractor-vendor.f6947578.js.map",
     "react-vendor.d4761c7d.js.map": "/react-run-web/static/js/react-vendor.d4761c7d.js.map"
   },
   "entrypoints": [
     "static/js/refractor-vendor.f6947578.js",
     "static/js/react-vendor.d4761c7d.js",
-    "static/css/main.e0299b60.css",
-    "static/js/main.3079ba41.js"
+    "static/css/main.6334a8ea.css",
+    "static/js/main.37267292.js"
   ]
 }
