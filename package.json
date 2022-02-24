@@ -60,7 +60,7 @@
     "@uiw/react-split": "5.8.5",
     "@uiw/react-textarea-code-editor": "1.4.15",
     "husky": "7.0.4",
-    "kkt": "7.0.5",
+    "kkt": "7.1.5",
     "lint-staged": "12.1.7",
     "prettier": "2.5.1",
     "react": "17.0.2",
