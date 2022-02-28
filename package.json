@@ -60,7 +60,7 @@
     "@types/react-dom": "~17.0.11",
     "@types/react-test-renderer": "~17.0.1",
     "@uiw/react-github-corners": "~1.5.3",
-    "@uiw/react-markdown-preview": "~3.4.7",
+    "@uiw/react-markdown-preview": "~3.5.0",
     "@uiw/react-split": "~5.8.7",
     "@uiw/react-textarea-code-editor": "~1.5.1",
     "husky": "~7.0.4",
