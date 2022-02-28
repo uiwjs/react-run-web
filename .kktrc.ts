@@ -7,37 +7,42 @@ import scopePluginOptions from '@kkt/scope-plugin-options';
 import pkg from './package.json';
 
 export default (conf: Configuration, env: 'development' | 'production', options: LoaderConfOptions) => {
-  conf = rawModules(conf, env, { ...options });
-  conf = scopePluginOptions(conf, env, {
-    ...options,
-    allowedFiles: [path.resolve(process.cwd(), 'README.md'), path.resolve(process.cwd(), 'src')],
-  });
   conf = lessModules(conf, env, options);
-  // Get the project version.
-  conf.plugins!.push(
-    new webpack.DefinePlugin({
-      VERSION: JSON.stringify(pkg.version),
-    }),
-  );
-  if (env === 'production') {
-    conf.optimization = {
-      ...conf.optimization,
-      splitChunks: {
-        cacheGroups: {
-          reactvendor: {
-            test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
-            name: 'react-vendor',
-            chunks: 'all',
-          },
-          prismjs: {
-            test: /[\\/]node_modules[\\/](refractor)[\\/]/,
-            name: 'refractor-vendor',
-            chunks: 'all',
+  if (options.bundle) {
+    conf.output!.library = '@uiw/react-run-web';
+    conf.externals = ['react'];
+  } else {
+    conf = rawModules(conf, env, { ...options });
+    conf = scopePluginOptions(conf, env, {
+      ...options,
+      allowedFiles: [path.resolve(process.cwd(), 'README.md'), path.resolve(process.cwd(), 'src')],
+    });
+    // Get the project version.
+    conf.plugins!.push(
+      new webpack.DefinePlugin({
+        VERSION: JSON.stringify(pkg.version),
+      }),
+    );
+    if (env === 'production') {
+      conf.optimization = {
+        ...conf.optimization,
+        splitChunks: {
+          cacheGroups: {
+            reactvendor: {
+              test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+              name: 'react-vendor',
+              chunks: 'all',
+            },
+            prismjs: {
+              test: /[\\/]node_modules[\\/](refractor)[\\/]/,
+              name: 'refractor-vendor',
+              chunks: 'all',
+            },
           },
         },
-      },
-    };
-    conf.output = { ...conf.output, publicPath: './' };
+      };
+      conf.output = { ...conf.output, publicPath: './' };
+    }
   }
   return conf;
 };
