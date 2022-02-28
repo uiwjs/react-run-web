@@ -41,14 +41,10 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
 
-    - run: npm install @jsdevtools/npm-publish -g
-    - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
-
     - name: Create Tag
       id: create_tag
-      uses: jaywcjlove/create-tag-action@v1.2.1
+      uses: jaywcjlove/create-tag-action@v1.3.5
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         package-path: ./package.json
 
     - name: Generate Changelog
@@ -77,3 +73,6 @@ jobs:
           ${{ steps.changelog.outputs.compareurl }}
           
           ${{ steps.changelog.outputs.changelog }}
+
+    - run: npm install @jsdevtools/npm-publish -g
+    - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
