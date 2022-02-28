@@ -10,7 +10,14 @@ export default (conf: Configuration, env: 'development' | 'production', options:
   conf = lessModules(conf, env, options);
   if (options.bundle) {
     conf.output!.library = '@uiw/react-run-web';
-    conf.externals = ['react'];
+    conf.externals = {
+      react: {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react',
+      },
+    };
   } else {
     conf = rawModules(conf, env, { ...options });
     conf = scopePluginOptions(conf, env, {
