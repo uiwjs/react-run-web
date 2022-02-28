@@ -6,8 +6,8 @@
 	else if(typeof exports === 'object')
 		exports["@uiw/react-run-web"] = factory(require("react"));
 	else
-		root["@uiw/react-run-web"] = factory(root["react"]);
-})(self, function(__WEBPACK_EXTERNAL_MODULE__156__) {
+		root["@uiw/react-run-web"] = factory(root["React"]);
+})(self, function(__WEBPACK_EXTERNAL_MODULE__787__) {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
@@ -123,7 +123,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(156),m=__webpack_require__(323),r=__webpack_require__(159);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
+var aa=__webpack_require__(787),m=__webpack_require__(323),r=__webpack_require__(159);function y(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(y(227));var ba=new Set,ca={};function da(a,b){ea(a,b);ea(a+"Capture",b)}
 function ea(a,b){ca[a]=b;for(a=0;a<b.length;a++)ba.add(b[a])}
 var fa=!("undefined"===typeof window||"undefined"===typeof window.document||"undefined"===typeof window.document.createElement),ha=/^[:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD][:A-Z_a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u02FF\u0370-\u037D\u037F-\u1FFF\u200C-\u200D\u2070-\u218F\u2C00-\u2FEF\u3001-\uD7FF\uF900-\uFDCF\uFDF0-\uFFFD\-.0-9\u00B7\u0300-\u036F\u203F-\u2040]*$/,ia=Object.prototype.hasOwnProperty,
 ja={},ka={};function la(a){if(ia.call(ka,a))return!0;if(ia.call(ja,a))return!1;if(ha.test(a))return ka[a]=!0;ja[a]=!0;return!1}function ma(a,b,c,d){if(null!==c&&0===c.type)return!1;switch(typeof b){case "function":case "symbol":return!0;case "boolean":if(d)return!1;if(null!==c)return!c.acceptsBooleans;a=a.toLowerCase().slice(0,5);return"data-"!==a&&"aria-"!==a;default:return!1}}
@@ -459,7 +459,7 @@ var __webpack_unused_export__;
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-__webpack_require__(323);var f=__webpack_require__(156),g=60103;__webpack_unused_export__=60107;if("function"===typeof Symbol&&Symbol.for){var h=Symbol.for;g=h("react.element");__webpack_unused_export__=h("react.fragment")}var m=f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,n=Object.prototype.hasOwnProperty,p={key:!0,ref:!0,__self:!0,__source:!0};
+__webpack_require__(323);var f=__webpack_require__(787),g=60103;__webpack_unused_export__=60107;if("function"===typeof Symbol&&Symbol.for){var h=Symbol.for;g=h("react.element");__webpack_unused_export__=h("react.fragment")}var m=f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner,n=Object.prototype.hasOwnProperty,p={key:!0,ref:!0,__self:!0,__source:!0};
 function q(c,a,k){var b,d={},e=null,l=null;void 0!==k&&(e=""+k);void 0!==a.key&&(e=""+a.key);void 0!==a.ref&&(l=a.ref);for(b in a)n.call(a,b)&&!p.hasOwnProperty(b)&&(d[b]=a[b]);if(c&&c.defaultProps)for(b in a=c.defaultProps,a)void 0===d[b]&&(d[b]=a[b]);return{$$typeof:g,type:c,key:e,ref:l,props:d,_owner:m.current}}exports.jsx=q;__webpack_unused_export__=q;
 
 
@@ -516,10 +516,10 @@ if (true) {
 
 /***/ }),
 
-/***/ 156:
+/***/ 787:
 /***/ ((module) => {
 
-module.exports = __WEBPACK_EXTERNAL_MODULE__156__;
+module.exports = __WEBPACK_EXTERNAL_MODULE__787__;
 
 /***/ })
 
@@ -746,15 +746,15 @@ function _objectWithoutProperties(source, excluded) {
 
   return target;
 }
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(156);
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+// EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
+var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(787);
+var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/__webpack_require__.n(external_root_React_commonjs2_react_commonjs_react_amd_react_);
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
 var react_dom = __webpack_require__(406);
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(724);
 ;// CONCATENATED MODULE: ./src/index.tsx
-var _excluded=["html","css","js","title","head","onLoad"];/* harmony default export */ const src = (/*#__PURE__*/external_react_default().forwardRef(function(props,ref){var _props$html=props.html,html=_props$html===void 0?'':_props$html,css=props.css,js=props.js,_props$title=props.title,title=_props$title===void 0?'Demo Title':_props$title,head=props.head,_onLoad=props.onLoad,other=_objectWithoutProperties(props,_excluded);var _useState=(0,external_react_.useState)(false),_useState2=_slicedToArray(_useState,2),isLoaded=_useState2[0],setIsLoaded=_useState2[1];var frameRef=(0,external_react_.useRef)(null);var srcDoc=(0,external_react_.useMemo)(function(){setIsLoaded(false);var jsString=js?"<script type=\"text/javascript\">".concat(js,"</script>"):'';var cssString=css?"<style>".concat(css,"</style>"):'';return"<!DOCTYPE html><html><head>".concat(cssString,"</head><body>").concat(html,"</body>").concat(jsString,"</html>");},[css,html,js]);function renderFrameContents(){if(!frameRef.current||!frameRef.current.contentDocument||!frameRef.current.contentWindow)return null;return[/*#__PURE__*/react_dom.createPortal(head,frameRef.current.contentDocument.head)];}return/*#__PURE__*/(0,jsx_runtime.jsx)("iframe",_objectSpread2(_objectSpread2({title:title,width:"100%",height:"100%",style:{border:0}},other),{},{onLoad:function onLoad(evn){setIsLoaded(true);_onLoad&&_onLoad(evn);},ref:frameRef,srcDoc:srcDoc,children:isLoaded&&renderFrameContents()}));}));
+var _excluded=["html","css","js","title","head","onLoad"];/* harmony default export */ const src = (/*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default().forwardRef(function(props,ref){var _props$html=props.html,html=_props$html===void 0?'':_props$html,css=props.css,js=props.js,_props$title=props.title,title=_props$title===void 0?'Demo Title':_props$title,head=props.head,_onLoad=props.onLoad,other=_objectWithoutProperties(props,_excluded);var _useState=(0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useState)(false),_useState2=_slicedToArray(_useState,2),isLoaded=_useState2[0],setIsLoaded=_useState2[1];var frameRef=(0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useRef)(null);var srcDoc=(0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useMemo)(function(){setIsLoaded(false);var jsString=js?"<script type=\"text/javascript\">".concat(js,"</script>"):'';var cssString=css?"<style>".concat(css,"</style>"):'';return"<!DOCTYPE html><html><head>".concat(cssString,"</head><body>").concat(html,"</body>").concat(jsString,"</html>");},[css,html,js]);function renderFrameContents(){if(!frameRef.current||!frameRef.current.contentDocument||!frameRef.current.contentWindow)return null;return[/*#__PURE__*/react_dom.createPortal(head,frameRef.current.contentDocument.head)];}return/*#__PURE__*/(0,jsx_runtime.jsx)("iframe",_objectSpread2(_objectSpread2({title:title,width:"100%",height:"100%",style:{border:0}},other),{},{onLoad:function onLoad(evn){setIsLoaded(true);_onLoad&&_onLoad(evn);},ref:frameRef,srcDoc:srcDoc,children:isLoaded&&renderFrameContents()}));}));
 })();
 
 /******/ 	return __webpack_exports__;
