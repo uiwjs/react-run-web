@@ -1,4 +1,4 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useMemo, useRef, useState, useImperativeHandle } from 'react';
 import ReactDOM from 'react-dom';
 
 export interface RunWebProps extends React.IframeHTMLAttributes<HTMLIFrameElement> {
@@ -13,6 +13,9 @@ export default React.forwardRef<HTMLIFrameElement, RunWebProps>((props, ref) => 
   const { html = '', css, js, title = 'Demo Title', head, onLoad, ...other } = props;
   const [isLoaded, setIsLoaded] = useState(false);
   const frameRef = useRef<HTMLIFrameElement>(null);
+
+  useImperativeHandle(ref, () => frameRef.current as HTMLIFrameElement, [frameRef]);
+
   const srcDoc = useMemo(() => {
     setIsLoaded(false);
     const jsString = js ? `<script type="text/javascript">${js}</script>` : '';
