@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://unpkg.com/@babel/standalone@7.17.x/babel.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react@17.x/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17.x/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@uiw/codepen-require-polyfill/index.js" crossorigin></script>
+    <title>Run Web</title>
+    <meta name="description" content="Online Code Editor for Rapid Web Development." />
+    <meta name="keywords" content="react,component,js,css,html,preview,editor" />
+  </head>
+  <body>
+    <a href="https://uiwjs.github.io/react-run-web">@uiw/react-run-web</a>
+    <div id="container" style="padding: 24px"></div>
+    <script src="https://unpkg.com/@uiw/react-run-web/dist/run-web.min.js"></script>
+    <script type="text/babel">
+      import RunWeb from '@uiw/react-run-web';
+      const Demo = () => {
+        return (
+          <RunWeb
+            css="div {color:red;}"
+            js="console.log('hello world!')"
+            html="<div>hello world!</div>"
+          />
+        );
+      }
+      ReactDOM.render(<Demo />, document.getElementById('container'));
+    </script>
+  </body>
+</html>
