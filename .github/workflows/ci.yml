@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: CI
 on:
   push:
     branches:
@@ -17,9 +17,22 @@ jobs:
     - run: npm run build
     - run: npm run doc
     - run: npm run test:coverage
-    - run: npm i coverage-badges-cli -g
-    - run: coverage-badges
+    - run: npm run bundle
+    - run: npm run bundle:min
+
+    - name: Create Coverage Badges
+      uses: jaywcjlove/coverage-badges-cli@main
+      with:
+        output: build/badges.svg
+
     - run: cp -rp coverage build
+    - run: cp -rp dist/* build
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
 
     - run: npm install @jsdevtools/npm-publish -g
     - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
@@ -40,12 +53,6 @@ jobs:
         filter-author: (小弟调调™|Renovate Bot)
         filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
-
     - name: Create Release
       uses: ncipollo/release-action@v1
       if: steps.create_tag.outputs.successful
@@ -63,4 +70,3 @@ jobs:
           ${{ steps.changelog.outputs.compareurl }}
           
           ${{ steps.changelog.outputs.changelog }}
-
