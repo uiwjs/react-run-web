@@ -62,7 +62,7 @@
     "@uiw/react-github-corners": "~1.5.3",
     "@uiw/react-markdown-preview": "~3.4.7",
     "@uiw/react-split": "~5.8.7",
-    "@uiw/react-textarea-code-editor": "~1.5.1",
+    "@uiw/react-textarea-code-editor": "~1.6.0",
     "husky": "~7.0.4",
     "kkt": "~7.1.5",
     "lint-staged": "~12.3.4",
