@@ -13,3 +13,13 @@ body {
 :before {
   box-sizing: inherit;
 }
+
+[data-color-mode*='dark'] .w-tc-editor-var,
+body[data-color-mode*='dark'] {
+  --color-header-border: #353535;
+}
+
+[data-color-mode*='light'] .w-tc-editor-var,
+body[data-color-mode*='light'] {
+  --color-header-border: #d5d5d5;
+}

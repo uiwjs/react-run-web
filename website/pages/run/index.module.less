@@ -1,13 +1,13 @@
 .header {
   height: 38px;
-  border-bottom: 1px solid #d5d5d5;
+  border-bottom: 1px solid var(--color-header-border);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 15px;
   padding-right: 15px;
   font-weight: bold;
-  background-color: #f7f7f7;
+  background-color: var(--color-canvas-subtle);
 }
 
 .menu {
@@ -20,6 +20,9 @@
     }
   }
   > a + a {
+    margin-left: 10px;
+  }
+  dark-mode {
     margin-left: 10px;
   }
 }
@@ -36,4 +39,9 @@
   width: 100%;
   height: 100%;
   overflow: auto;
+}
+
+:global(.w-split-vertical) > :global(.w-split-line-bar) div::after,
+:global(.w-split-horizontal) > :global(.w-split-line-bar) div::after {
+  background-color: var(--color-header-border);
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import Split from '@uiw/react-split';
 import CodeEditor from '@uiw/react-textarea-code-editor';
+import '@wcj/dark-mode';
 import Tag from './Tag';
 import RunWeb from '../../../';
 import styles from './index.module.less';
@@ -67,6 +68,7 @@ export default function Run() {
           <Link to="/docs" state={query.toString() || ''}>
             Docs
           </Link>
+          <dark-mode permanent />
         </div>
       </div>
       <Split style={{ width: '100%', height: 'calc(100vh - 39px)' }}>
