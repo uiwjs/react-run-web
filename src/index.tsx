@@ -16,11 +16,15 @@ export default React.forwardRef<HTMLIFrameElement, RunWebProps>((props, ref) => 
 
   useImperativeHandle(ref, () => frameRef.current as HTMLIFrameElement, [frameRef]);
 
-  const srcDoc = useMemo(() => {
+  useMemo(() => {
     setIsLoaded(false);
     const jsString = js ? `<script type="text/javascript">${js}</script>` : '';
     const cssString = css ? `<style>${css}</style>` : '';
-    return `<!DOCTYPE html><html><head>${cssString}</head><body>${html}</body>${jsString}</html>`;
+    const result = `<!DOCTYPE html><html><head>${cssString}</head><body>${html}</body>${jsString}</html>`;
+    const blob = new Blob([result], { type: 'text/html' });
+    if (frameRef.current) {
+      frameRef.current.src = URL.createObjectURL(blob);
+    }
   }, [css, html, js]);
 
   function renderFrameContents() {
@@ -40,7 +44,6 @@ export default React.forwardRef<HTMLIFrameElement, RunWebProps>((props, ref) => 
         onLoad && onLoad(evn);
       }}
       ref={frameRef}
-      srcDoc={srcDoc}
     >
       {isLoaded && renderFrameContents()}
     </iframe>

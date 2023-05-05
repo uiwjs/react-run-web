@@ -78,7 +78,7 @@ export default function Run() {
             <div className={styles.editorCode}>
               <CodeEditor
                 value={htmlStr}
-                style={{ minHeight: '100%' }}
+                style={{ fontSize: 16, minHeight: '100%' }}
                 placeholder="Please enter HTML code."
                 onChange={(evn) => handleChange(evn.target.value, 'html')}
                 language="html"
@@ -96,7 +96,7 @@ export default function Run() {
             <div className={styles.editorCode}>
               <CodeEditor
                 value={jsStr}
-                style={{ minHeight: '100%' }}
+                style={{ fontSize: 16, minHeight: '100%' }}
                 placeholder="Please enter JavaScript code."
                 onChange={(evn) => handleChange(evn.target.value, 'js')}
                 language="js"
@@ -114,7 +114,7 @@ export default function Run() {
             <div className={styles.editorCode}>
               <CodeEditor
                 value={cssStr}
-                style={{ minHeight: '100%' }}
+                style={{ fontSize: 16, minHeight: '100%' }}
                 placeholder="Please enter CSS code."
                 onChange={(evn) => handleChange(evn.target.value, 'css')}
                 language="css"
