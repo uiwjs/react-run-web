@@ -66,7 +66,7 @@
     "@uiw/react-textarea-code-editor": "^2.1.1",
     "husky": "^8.0.3",
     "kkt": "^7.4.9",
-    "lint-staged": "^13.2.1",
+    "lint-staged": "^14.0.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
