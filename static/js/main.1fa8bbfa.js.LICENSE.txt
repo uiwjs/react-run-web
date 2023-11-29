@@ -26,7 +26,18 @@
  */
 
 /**
- * @remix-run/router v1.6.1
+ * @package @wcj/dark-mode
+ * Web Component that toggles dark mode 🌒
+ * Github: https://github.com/jaywcjlove/dark-mode.git
+ * Website: https://jaywcjlove.github.io/dark-mode
+ * 
+ * Licensed under the MIT license.
+ * @license Copyright © 2022. Licensed under the MIT License
+ * @author kenny wong <wowohoo@qq.com>
+ */
+
+/**
+ * @remix-run/router v1.13.0
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -37,7 +48,7 @@
  */
 
 /**
- * React Router DOM v6.11.1
+ * React Router DOM v6.20.0
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -48,7 +59,7 @@
  */
 
 /**
- * React Router v6.11.1
+ * React Router v6.20.0
  *
  * Copyright (c) Remix Software Inc.
  *
@@ -59,7 +70,7 @@
  */
 
 /**! 
- * @uiw/copy-to-clipboard v1.0.14 
+ * @uiw/copy-to-clipboard v1.0.16 
  * Copy to clipboard. 
  * 
  * Copyright (c) 2023 Kenny Wang 
