@@ -1,6 +1,7 @@
 Run Web
 ===
 
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
 [![Build & Deploy](https://github.com/uiwjs/react-run-web/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/react-run-web/actions/workflows/ci.yml)
 [![Coverage Status](https://uiwjs.github.io/react-run-web/badges.svg)](https://uiwjs.github.io/react-run-web/coverage/lcov-report)
 [![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-run-web/file/README.md)

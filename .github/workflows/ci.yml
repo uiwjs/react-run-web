@@ -7,11 +7,14 @@ on:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 18
         registry-url: 'https://registry.npmjs.org'
 
     - run: npm install
@@ -65,7 +68,7 @@ jobs:
         name: ${{ steps.create_tag.outputs.version }}
         tag: ${{ steps.create_tag.outputs.version }}
         body: |
-          [![](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-run-web@${{steps.create_tag.outputs.versionNumber}}/file/README.md) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@uiw/react-run-web)](https://bundlephobia.com/result?p=@uiw/react-run-web@${{steps.create_tag.outputs.versionNumber}})
+          [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor) [![](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/@uiw/react-run-web@${{steps.create_tag.outputs.versionNumber}}/file/README.md) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/@uiw/react-run-web)](https://bundlephobia.com/result?p=@uiw/react-run-web@${{steps.create_tag.outputs.versionNumber}})
 
           ```bash
           npm i @uiw/react-run-web@${{steps.create_tag.outputs.versionNumber}}
@@ -78,7 +81,7 @@ jobs:
     - run: npm install @jsdevtools/npm-publish -g
     - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
 
-    - run: npm publish --access public
+    - run: npm publish --access public --provenance
       name: 📦 @uiw/react-run-web publish to NPM
       continue-on-error: true
       env:
