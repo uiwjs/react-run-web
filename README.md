@@ -71,3 +71,17 @@ npm run build
 
 The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
+
+## Contributors
+
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/uiwjs/react-run-web/graphs/contributors">
+  <img src="https://uiwjs.github.io/react-run-web/CONTRIBUTORS.svg" />
+</a>
+
+Made with [contributors](https://github.com/jaywcjlove/github-action-contributors).
+
+## License
+
+Licensed under the MIT License.
