@@ -15,6 +15,7 @@ return /******/ (() => { // webpackBootstrap
 /***/ 448:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
+var __webpack_unused_export__;
 /**
  * @license React
  * react-dom.production.min.js
@@ -332,12 +333,12 @@ Fc=function(a){if(13===a.tag){var b=Zg(a,134217728);if(null!==b){var c=L();mh(b,
 yb=function(a,b,c){switch(b){case "input":bb(a,c);b=c.name;if("radio"===c.type&&null!=b){for(c=a;c.parentNode;)c=c.parentNode;c=c.querySelectorAll("input[name="+JSON.stringify(""+b)+'][type="radio"]');for(b=0;b<c.length;b++){var d=c[b];if(d!==a&&d.form===a.form){var e=Db(d);if(!e)throw Error(p(90));Wa(d);bb(d,e)}}}break;case "textarea":ib(a,c);break;case "select":b=c.value,null!=b&&fb(a,!!c.multiple,b,!1)}};Gb=Rk;Hb=Sk;
 var tl={usingClientEntryPoint:!1,Events:[Cb,ue,Db,Eb,Fb,Rk]},ul={findFiberByHostInstance:Wc,bundleType:0,version:"18.2.0",rendererPackageName:"react-dom"};
 var vl={bundleType:ul.bundleType,version:ul.version,rendererPackageName:ul.rendererPackageName,rendererConfig:ul.rendererConfig,overrideHookState:null,overrideHookStateDeletePath:null,overrideHookStateRenamePath:null,overrideProps:null,overridePropsDeletePath:null,overridePropsRenamePath:null,setErrorHandler:null,setSuspenseHandler:null,scheduleUpdate:null,currentDispatcherRef:ua.ReactCurrentDispatcher,findHostInstanceByFiber:function(a){a=Zb(a);return null===a?null:a.stateNode},findFiberByHostInstance:ul.findFiberByHostInstance||
-kl,findHostInstancesForRefresh:null,scheduleRefresh:null,scheduleRoot:null,setRefreshHandler:null,getCurrentFiber:null,reconcilerVersion:"18.2.0-next-9e3b772b8-20220608"};if("undefined"!==typeof __REACT_DEVTOOLS_GLOBAL_HOOK__){var wl=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(!wl.isDisabled&&wl.supportsFiber)try{kc=wl.inject(vl),lc=wl}catch(a){}}exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED=tl;
-exports.createPortal=function(a,b){var c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;if(!ol(b))throw Error(p(200));return dl(a,b,null,c)};exports.createRoot=function(a,b){if(!ol(a))throw Error(p(299));var c=!1,d="",e=ll;null!==b&&void 0!==b&&(!0===b.unstable_strictMode&&(c=!0),void 0!==b.identifierPrefix&&(d=b.identifierPrefix),void 0!==b.onRecoverableError&&(e=b.onRecoverableError));b=cl(a,1,!1,null,null,c,!1,d,e);a[uf]=b.current;sf(8===a.nodeType?a.parentNode:a);return new ml(b)};
-exports.findDOMNode=function(a){if(null==a)return null;if(1===a.nodeType)return a;var b=a._reactInternals;if(void 0===b){if("function"===typeof a.render)throw Error(p(188));a=Object.keys(a).join(",");throw Error(p(268,a));}a=Zb(b);a=null===a?null:a.stateNode;return a};exports.flushSync=function(a){return Sk(a)};exports.hydrate=function(a,b,c){if(!pl(b))throw Error(p(200));return sl(null,a,b,!0,c)};
-exports.hydrateRoot=function(a,b,c){if(!ol(a))throw Error(p(405));var d=null!=c&&c.hydratedSources||null,e=!1,f="",g=ll;null!==c&&void 0!==c&&(!0===c.unstable_strictMode&&(e=!0),void 0!==c.identifierPrefix&&(f=c.identifierPrefix),void 0!==c.onRecoverableError&&(g=c.onRecoverableError));b=fl(b,null,a,1,null!=c?c:null,e,!1,f,g);a[uf]=b.current;sf(a);if(d)for(a=0;a<d.length;a++)c=d[a],e=c._getVersion,e=e(c._source),null==b.mutableSourceEagerHydrationData?b.mutableSourceEagerHydrationData=[c,e]:b.mutableSourceEagerHydrationData.push(c,
-e);return new nl(b)};exports.render=function(a,b,c){if(!pl(b))throw Error(p(200));return sl(null,a,b,!1,c)};exports.unmountComponentAtNode=function(a){if(!pl(a))throw Error(p(40));return a._reactRootContainer?(Sk(function(){sl(null,null,a,!1,function(){a._reactRootContainer=null;a[uf]=null})}),!0):!1};exports.unstable_batchedUpdates=Rk;
-exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!pl(c))throw Error(p(200));if(null==a||void 0===a._reactInternals)throw Error(p(38));return sl(a,b,c,!1,d)};exports.version="18.2.0-next-9e3b772b8-20220608";
+kl,findHostInstancesForRefresh:null,scheduleRefresh:null,scheduleRoot:null,setRefreshHandler:null,getCurrentFiber:null,reconcilerVersion:"18.2.0-next-9e3b772b8-20220608"};if("undefined"!==typeof __REACT_DEVTOOLS_GLOBAL_HOOK__){var wl=__REACT_DEVTOOLS_GLOBAL_HOOK__;if(!wl.isDisabled&&wl.supportsFiber)try{kc=wl.inject(vl),lc=wl}catch(a){}}__webpack_unused_export__=tl;
+exports.createPortal=function(a,b){var c=2<arguments.length&&void 0!==arguments[2]?arguments[2]:null;if(!ol(b))throw Error(p(200));return dl(a,b,null,c)};__webpack_unused_export__=function(a,b){if(!ol(a))throw Error(p(299));var c=!1,d="",e=ll;null!==b&&void 0!==b&&(!0===b.unstable_strictMode&&(c=!0),void 0!==b.identifierPrefix&&(d=b.identifierPrefix),void 0!==b.onRecoverableError&&(e=b.onRecoverableError));b=cl(a,1,!1,null,null,c,!1,d,e);a[uf]=b.current;sf(8===a.nodeType?a.parentNode:a);return new ml(b)};
+__webpack_unused_export__=function(a){if(null==a)return null;if(1===a.nodeType)return a;var b=a._reactInternals;if(void 0===b){if("function"===typeof a.render)throw Error(p(188));a=Object.keys(a).join(",");throw Error(p(268,a));}a=Zb(b);a=null===a?null:a.stateNode;return a};__webpack_unused_export__=function(a){return Sk(a)};__webpack_unused_export__=function(a,b,c){if(!pl(b))throw Error(p(200));return sl(null,a,b,!0,c)};
+__webpack_unused_export__=function(a,b,c){if(!ol(a))throw Error(p(405));var d=null!=c&&c.hydratedSources||null,e=!1,f="",g=ll;null!==c&&void 0!==c&&(!0===c.unstable_strictMode&&(e=!0),void 0!==c.identifierPrefix&&(f=c.identifierPrefix),void 0!==c.onRecoverableError&&(g=c.onRecoverableError));b=fl(b,null,a,1,null!=c?c:null,e,!1,f,g);a[uf]=b.current;sf(a);if(d)for(a=0;a<d.length;a++)c=d[a],e=c._getVersion,e=e(c._source),null==b.mutableSourceEagerHydrationData?b.mutableSourceEagerHydrationData=[c,e]:b.mutableSourceEagerHydrationData.push(c,
+e);return new nl(b)};__webpack_unused_export__=function(a,b,c){if(!pl(b))throw Error(p(200));return sl(null,a,b,!1,c)};__webpack_unused_export__=function(a){if(!pl(a))throw Error(p(40));return a._reactRootContainer?(Sk(function(){sl(null,null,a,!1,function(){a._reactRootContainer=null;a[uf]=null})}),!0):!1};__webpack_unused_export__=Rk;
+__webpack_unused_export__=function(a,b,c,d){if(!pl(c))throw Error(p(200));if(null==a||void 0===a._reactInternals)throw Error(p(38));return sl(a,b,c,!1,d)};__webpack_unused_export__="18.2.0-next-9e3b772b8-20220608";
 
 
 /***/ }),
@@ -523,15 +524,160 @@ module.exports = __WEBPACK_EXTERNAL_MODULE__787__;
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
+// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(787);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(935);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(893);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().forwardRef((props,ref)=>{const{html='',css,js,title='Demo Title',head,onLoad,...other}=props;const[isLoaded,setIsLoaded]=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);const frameRef=(0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);(0,react__WEBPACK_IMPORTED_MODULE_0__.useImperativeHandle)(ref,()=>frameRef.current,[frameRef]);(0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(()=>{setIsLoaded(false);const jsString=js?"<script type=\"text/javascript\">".concat(js,"</script>"):'';const cssString=css?"<style>".concat(css,"</style>"):'';const result="<!DOCTYPE html><html><head>".concat(cssString,"</head><body>").concat(html,"</body>").concat(jsString,"</html>");const blob=new Blob([result],{type:'text/html'});if(frameRef.current){frameRef.current.src=URL.createObjectURL(blob);}},[css,html,js]);function renderFrameContents(){if(!frameRef.current||!frameRef.current.contentDocument||!frameRef.current.contentWindow)return null;return[/*#__PURE__*/react_dom__WEBPACK_IMPORTED_MODULE_1__.createPortal(head,frameRef.current.contentDocument.head)];}return/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("iframe",{title:title,width:"100%",height:"100%",style:{border:0},...other,onLoad:evn=>{setIsLoaded(true);onLoad&&onLoad(evn);},ref:frameRef,children:isLoaded&&renderFrameContents()});}));
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ src)
+});
+
+// EXTERNAL MODULE: external {"root":"React","commonjs2":"react","commonjs":"react","amd":"react"}
+var external_root_React_commonjs2_react_commonjs_react_amd_react_ = __webpack_require__(787);
+var external_root_React_commonjs2_react_commonjs_react_amd_react_default = /*#__PURE__*/__webpack_require__.n(external_root_React_commonjs2_react_commonjs_react_amd_react_);
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/extends.js
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+;// CONCATENATED MODULE: ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+// EXTERNAL MODULE: ./node_modules/react-dom/index.js
+var react_dom = __webpack_require__(935);
+;// CONCATENATED MODULE: ./node_modules/@uiw/react-iframe/esm/Context.js
+
+var doc;
+var win;
+if (typeof document !== 'undefined') {
+  doc = document;
+}
+if (typeof window !== 'undefined') {
+  win = window;
+}
+var FrameContext = /*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default().createContext({
+  document: doc,
+  window: win
+});
+var useFrame = () => React.useContext(FrameContext);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(893);
+;// CONCATENATED MODULE: ./node_modules/@uiw/react-iframe/esm/index.js
+
+
+var _excluded = ["children", "head", "initialContent", "src", "mountTarget"];
+
+
+
+
+
+var IFrame = /*#__PURE__*/(0,external_root_React_commonjs2_react_commonjs_react_amd_react_.forwardRef)((_ref, ref) => {
+  var {
+      children,
+      head,
+      initialContent,
+      src,
+      mountTarget
+    } = _ref,
+    other = _objectWithoutPropertiesLoose(_ref, _excluded);
+  var [iframeLoaded, setIframeLoaded] = (0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useState)(false);
+  var [mountNode, setMountNode] = (0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useState)();
+  var refContent = node => {
+    if (node) {
+      setMountNode(node);
+    }
+  };
+  (0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useImperativeHandle)(ref, () => mountNode, [mountNode]);
+  var html = initialContent || "<!DOCTYPE html><html><head></head><body></body></html>";
+  var getDoc = () => mountNode ? mountNode.contentDocument : null;
+  var getMountTarget = () => {
+    var doc = getDoc();
+    if (mountTarget) {
+      return doc == null ? void 0 : doc.querySelector(mountTarget);
+    }
+    return doc == null ? void 0 : doc.body;
+  };
+  var handleLoad = (0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useCallback)(() => {
+    /**
+     * In certain situations on a cold cache DOMContentLoaded never gets called
+     * fallback to an interval to check if that's the case
+     */
+    var loadCheck = () => setInterval(() => handleLoad(), 500);
+    clearInterval(loadCheck());
+    // Bail update as some browsers will trigger on both DOMContentLoaded & onLoad ala firefox
+    if (!iframeLoaded) {
+      setIframeLoaded(true);
+    }
+  }, [iframeLoaded]);
+  (0,external_root_React_commonjs2_react_commonjs_react_amd_react_.useEffect)(() => {
+    if (mountNode && !src) {
+      var _mountNode$contentWin;
+      (_mountNode$contentWin = mountNode.contentWindow) == null || _mountNode$contentWin.addEventListener('DOMContentLoaded', handleLoad);
+    }
+    return () => {
+      if (mountNode && !src) {
+        var _mountNode$contentWin2;
+        (_mountNode$contentWin2 = mountNode.contentWindow) == null || _mountNode$contentWin2.removeEventListener('DOMContentLoaded', handleLoad);
+      }
+    };
+  }, [mountNode, handleLoad]);
+  var renderFrameContents = () => {
+    var _getDoc;
+    var doc = getDoc();
+    var header = (_getDoc = getDoc()) == null ? void 0 : _getDoc.head;
+    var mountTarget = getMountTarget();
+    // @ts-ignore
+    var win = (doc == null ? void 0 : doc.defaultView) || (doc == null ? void 0 : doc.parentView);
+    var contents = /*#__PURE__*/(0,jsx_runtime.jsx)(FrameContext.Provider, {
+      value: {
+        document: doc,
+        window: win
+      },
+      children: children
+    });
+    return [header && head && /*#__PURE__*/(0,react_dom.createPortal)(head, header), mountNode && mountTarget && /*#__PURE__*/(0,react_dom.createPortal)(contents, mountTarget)];
+  };
+  var reProps = {};
+  if (src) {
+    delete reProps.srcDoc;
+    reProps.src = src;
+    reProps.onLoad = other.onLoad;
+  } else {
+    reProps.srcDoc = html;
+  }
+  return /*#__PURE__*/(0,jsx_runtime.jsx)("iframe", _extends({
+    title: other.title,
+    ref: refContent
+  }, other, {
+    onLoad: handleLoad
+  }, reProps, {
+    children: iframeLoaded && renderFrameContents()
+  }));
+});
+IFrame.displayName = 'IFrame';
+/* harmony default export */ const esm = (IFrame);
+;// CONCATENATED MODULE: ./src/index.tsx
+/* harmony default export */ const src = (/*#__PURE__*/external_root_React_commonjs2_react_commonjs_react_amd_react_default().forwardRef((props,ref)=>{const{html='',css,js,title='Demo Title',head,...other}=props;const jsString=js?"<script type=\"text/javascript\">".concat(js,"</script>"):'';const cssString=css?"<style>".concat(css,"</style>"):'';const result="<!DOCTYPE html><html><head>".concat(cssString,"</head><body>").concat(html,"</body>").concat(jsString,"</html>");const blob=new Blob([result],{type:'text/html'});const url=URL.createObjectURL(blob);return/*#__PURE__*/(0,jsx_runtime.jsx)(esm,{title:title,head:head,width:"100%",height:"100%",style:{border:0},...other,ref:ref,src:url,mountTarget:"#mountHere"});}));
 })();
 
 /******/ 	return __webpack_exports__;

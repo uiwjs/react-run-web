@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/react-run-web/static/css/main.15732435.css",
-    "main.js": "/react-run-web/static/js/main.1fa8bbfa.js",
+    "main.js": "/react-run-web/static/js/main.f443b02a.js",
     "refractor-vendor.js": "/react-run-web/static/js/refractor-vendor.2fc3608c.js",
     "react-vendor.js": "/react-run-web/static/js/react-vendor.66ccf587.js",
     "index.html": "/react-run-web/index.html",
     "main.15732435.css.map": "/react-run-web/static/css/main.15732435.css.map",
-    "main.1fa8bbfa.js.map": "/react-run-web/static/js/main.1fa8bbfa.js.map",
+    "main.f443b02a.js.map": "/react-run-web/static/js/main.f443b02a.js.map",
     "refractor-vendor.2fc3608c.js.map": "/react-run-web/static/js/refractor-vendor.2fc3608c.js.map",
     "react-vendor.66ccf587.js.map": "/react-run-web/static/js/react-vendor.66ccf587.js.map"
   },
@@ -14,6 +14,6 @@
     "static/js/refractor-vendor.2fc3608c.js",
     "static/js/react-vendor.66ccf587.js",
     "static/css/main.15732435.css",
-    "static/js/main.1fa8bbfa.js"
+    "static/js/main.f443b02a.js"
   ]
 }
