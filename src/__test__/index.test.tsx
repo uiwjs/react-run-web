@@ -5,7 +5,6 @@ import RunWeb from '../';
 it('Should output a RunWeb', async () => {
   const component = TestRenderer.create(<RunWeb />);
   let tree = component.toJSON();
-  console.log('tree:', tree);
   if (tree && !Array.isArray(tree)) {
     expect(tree.type).toEqual('iframe');
     expect(tree.props.title).toEqual('Demo Title');
