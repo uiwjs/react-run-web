@@ -1,42 +1,43 @@
-/* eslint-disable jest/no-conditional-expect */
-import TestRenderer from 'react-test-renderer';
+import { screen, render, waitFor } from '@testing-library/react';
 import RunWeb from '../';
 
-it('Should output a RunWeb', async () => {
-  const component = TestRenderer.create(<RunWeb />);
-  let tree = component.toJSON();
-  if (tree && !Array.isArray(tree)) {
-    expect(tree.type).toEqual('iframe');
-    expect(tree.props.title).toEqual('Demo Title');
-    expect(tree.props.width).toEqual('100%');
-    expect(tree.props.height).toEqual('100%');
-    expect(tree.props.style).toEqual({ border: 0 });
-    expect(tree.props.srcDoc).toBeUndefined();
-  }
+global.URL.createObjectURL = jest.fn((url) => {
+  return '';
+});
+
+it('renders <RunWeb /> test case', async () => {
+  const { debug } = render(<RunWeb data-testid="iframe" />);
+  await waitFor(() => {
+    const iframe = screen.getByTestId('iframe');
+    expect(iframe).toHaveProperty('srcdoc', '<!DOCTYPE html><html><head></head><body></body></html>');
+    expect(iframe).toHaveProperty('style.border', '0px');
+    expect(iframe).toHaveProperty('title', 'Demo Title');
+    expect(iframe).toHaveProperty('width', '100%');
+    expect(iframe).toHaveProperty('height', '100%');
+  });
 });
 
 it('RunWeb Props js="..."', async () => {
-  const component = TestRenderer.create(<RunWeb js="console.log('hello world!')" />);
-  let tree = component.toJSON();
-  if (tree && !Array.isArray(tree)) {
-    expect(tree.type).toEqual('iframe');
-    expect(tree.props.title).toEqual('Demo Title');
-    expect(tree.props.width).toEqual('100%');
-    expect(tree.props.height).toEqual('100%');
-    expect(tree.props.style).toEqual({ border: 0 });
-    expect(tree.props.srcDoc).toBeUndefined();
-  }
+  const { debug } = render(<RunWeb data-testid="iframe" title="Example" js="console.log('hello world!')" />);
+  await waitFor(() => {
+    // debug()
+    const iframe = screen.getByTestId('iframe');
+    expect(iframe).toHaveProperty('srcdoc', '<!DOCTYPE html><html><head></head><body></body></html>');
+    expect(iframe).toHaveProperty('style.border', '0px');
+    expect(iframe).toHaveProperty('title', 'Example');
+    expect(iframe).toHaveProperty('width', '100%');
+    expect(iframe).toHaveProperty('height', '100%');
+  });
 });
 
 it('RunWeb Props css="..."', async () => {
-  const component = TestRenderer.create(<RunWeb css="body { color:red; }" />);
-  let tree = component.toJSON();
-  if (tree && !Array.isArray(tree)) {
-    expect(tree.type).toEqual('iframe');
-    expect(tree.props.title).toEqual('Demo Title');
-    expect(tree.props.width).toEqual('100%');
-    expect(tree.props.height).toEqual('100%');
-    expect(tree.props.style).toEqual({ border: 0 });
-    expect(tree.props.srcDoc).toBeUndefined();
-  }
+  const { debug } = render(<RunWeb data-testid="iframe" css="body { color:red; }" />);
+  await waitFor(() => {
+    const iframe = screen.getByTestId('iframe');
+    expect(iframe).toHaveProperty('srcdoc', '<!DOCTYPE html><html><head></head><body></body></html>');
+    expect(iframe).toHaveProperty('style.border', '0px');
+    expect(iframe).toHaveProperty('title', 'Demo Title');
+    expect(iframe).toHaveProperty('width', '100%');
+    expect(iframe).toHaveProperty('height', '100%');
+  });
 });

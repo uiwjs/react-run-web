@@ -3,6 +3,7 @@
   "version": "1.0.15",
   "description": "Online Code Editor for Rapid Web Development.",
   "homepage": "https://uiwjs.github.io/react-run-web/",
+  "funding": "https://jaywcjlove.github.io/#/sponsor",
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "scripts": {
@@ -14,8 +15,8 @@
     "bundle": "ncc build src/index.tsx --target web --filename run-web",
     "bundle:min": "ncc build src/index.tsx --target web --filename run-web --minify",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
-    "test": "kkt test --env=jsdom --app-src=./website",
-    "test:coverage": "kkt test --env=jsdom --coverage --app-src=./website"
+    "test": "tsbb test",
+    "test:coverage": "tsbb test --coverage --bail"
   },
   "repository": {
     "type": "git",
@@ -59,11 +60,11 @@
     "@types/react": "^18.0.34",
     "@types/react-dom": "^18.0.11",
     "@types/react-test-renderer": "^18.0.0",
-    "@wcj/dark-mode": "^1.0.15",
     "@uiw/react-github-corners": "^1.5.15",
     "@uiw/react-markdown-preview": "^4.1.10",
     "@uiw/react-split": "^5.8.10",
     "@uiw/react-textarea-code-editor": "^3.0.0",
+    "@wcj/dark-mode": "^1.0.15",
     "husky": "^8.0.3",
     "kkt": "^7.4.9",
     "lint-staged": "^13.2.1",
@@ -71,7 +72,6 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
-    "react-test-renderer": "^18.2.0",
     "tsbb": "^4.1.5"
   },
   "eslintConfig": {
@@ -91,5 +91,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "dependencies": {
+    "@uiw/react-iframe": "^1.0.2"
   }
 }

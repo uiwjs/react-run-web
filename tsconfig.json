@@ -15,8 +15,7 @@
     "declaration": true,
     "jsx": "react-jsx",
     "outDir": "cjs",
-    "noFallthroughCasesInSwitch": true,
-    "noEmit": true
+    "noFallthroughCasesInSwitch": true
   },
   "include": ["src"]
 }

@@ -2,8 +2,6 @@
   "extends": "../tsconfig",
   "include": ["../website", "../src"],
   "compilerOptions": {
-    "baseUrl": ".",
-    "emitDeclarationOnly": true,
-    "noEmit": false
+    "baseUrl": "."
   }
 }
