@@ -78,8 +78,6 @@ jobs:
           
           ${{ steps.changelog.outputs.changelog }}
 
-    - run: npm install @jsdevtools/npm-publish -g
-    - run: npm-publish --token="${{ secrets.NPM_TOKEN }}" ./package.json
 
     - run: npm publish --access public --provenance
       name: 📦 @uiw/react-run-web publish to NPM
